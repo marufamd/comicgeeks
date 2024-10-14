@@ -23,9 +23,9 @@
     "leagueofcomicgeeks",
     "league of comic geeks"
   ],
-  "author": "maruf99",
-  "repository": "https://github.com/maruf99/comicgeeks",
-  "homepage": "https://github.com/maruf99/comicgeeks#readme",
+  "author": "marufamd",
+  "repository": "https://github.com/marufamd/comicgeeks",
+  "homepage": "https://github.com/marufamd/comicgeeks#readme",
   "license": "MIT",
   "devDependencies": {
     "@types/cheerio": "^0.22.23",

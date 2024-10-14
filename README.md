@@ -18,7 +18,7 @@ npm install comicgeeks
 
 ## Usage
 
-View the full documentation [here](https://maruf99.github.io/comicgeeks/).
+View the full documentation [here](https://marufamd.github.io/comicgeeks/).
 
 Every method to retrieve data is prefixed with `fetch`:
 

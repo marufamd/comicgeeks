@@ -1,9 +1,0 @@
-{
-  "name": "comicgeeks-demo",
-  "version": "1.0.0",
-  "description": "Local demo to test comicgeeks package with npm link",
-  "main": "test-demo.js",
-  "scripts": {
-    "start": "node test-demo.js"
-  }
-}

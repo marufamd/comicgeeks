@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
+        "rootDir": "src",
         "outDir": "dist",
         "lib": [
             "ES2020",
             "ESNext"
         ],
-        "module": "CommonJS",
+        "module": "Node16",
         "target": "ES2017",
         "declaration": true,
         "declarationDir": "typings",
@@ -13,11 +14,11 @@
         "alwaysStrict": true,
         "strictNullChecks": false,
         "esModuleInterop": true,
-        "moduleResolution": "Node",
+        "moduleResolution": "node16",
         "removeComments": false,
         "preserveConstEnums": true,
         "pretty": true,
         "resolveJsonModule": true,
-        "importsNotUsedAsValues": "error"
+        "skipLibCheck": true
     }
 }

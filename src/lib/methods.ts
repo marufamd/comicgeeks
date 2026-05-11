@@ -1,5 +1,8 @@
-import cheerio from 'cheerio';
-import fetch from 'node-fetch';
+import * as cheerio from 'cheerio';
+import { Impit } from 'impit';
+
+const impit = new Impit({ browser: 'chrome' });
+
 import {
     BASE_URL,
     CollectionTypes,
@@ -20,7 +23,8 @@ import { formatURL, resolveDate, resolvePublishers } from './util';
 
 async function _fetchData(params: Partial<RequestParameters>, parser: ParserFunction): Promise<Comic[]> {
     const url = formatURL(`${BASE_URL}/comic/get_comics`, params);
-    const { list } = await fetch(url).then(res => res.json());
+    const responseJson: any = await impit.fetch(url).then(res => res.json());
+    const { list } = responseJson;
 
     const $ = cheerio.load(list);
 
@@ -227,7 +231,7 @@ export function fetchSearchResults(query: string, format: CollectionTypes = Coll
 export async function fetchUser(name: string): Promise<User> {
     const url = `${BASE_URL}/profile/${name.toLowerCase()}`;
 
-    const text = await fetch(`${url}/pull-list`).then(res => res.text());
+    const text = await impit.fetch(`${url}/pull-list`).then(res => res.text());
     const $ = cheerio.load(text);
 
     const details = $('#comic-list-block').first();

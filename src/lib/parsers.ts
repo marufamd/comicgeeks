@@ -1,8 +1,10 @@
+import type { CheerioAPI } from 'cheerio';
+import type { Element } from 'domhandler';
 import { BASE_URL } from './constants';
 import type { Comic } from './interfaces';
 
 type Parser = 'Issue' | 'Series';
-export type ParserFunction = ($: cheerio.Root) => (_: number, el: cheerio.Element) => Comic;
+export type ParserFunction = ($: CheerioAPI) => (_: number, el: Element) => Comic;
 
 export default {
     Issue: $ => (_, el) => {
